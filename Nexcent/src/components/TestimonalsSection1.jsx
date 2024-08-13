@@ -11,7 +11,7 @@ const TestimonialsSection1 = () => {
             <img
               src={testimonialImage}
               alt="Testimonial"
-              style={{ width: '100%', height: 'auto', borderRadius: '8px' }} 
+              style={{ width: '441.53px', height: '433.4px', borderRadius: '8px' }} 
             />
           </Grid>
           <Grid item xs={12} sm={6}>

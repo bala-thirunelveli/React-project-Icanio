@@ -1,38 +1,133 @@
+import { East } from '@mui/icons-material';
+
 import React from 'react';
-import { Container, Typography, Box, Grid, Button, Paper } from '@mui/material';
-import testimonialImage from '../assets/testimonialImage3.png'; 
-
-const TestimonialsSection = () => {
+import Box from "@mui/material/Box";
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import testimonialImage from '../assets/testimonialImage3.png';
+import Sampleicon1 from '../assets/sampleicon1.png';
+import Sampleicon2 from '../assets/sampleicon2.png';
+import Sampleicon3 from '../assets/sampleicon3.png';
+import Sampleicon4 from '../assets/sampleicon4.png';
+import Sampleicon5 from '../assets/sampleicon5.png';
+import Sampleicon6 from '../assets/sampleicon6.png';
+const TestimonalsSection2 = () => {
   return (
-    
-    <Container>
-      <Box py={5}>
-        <Grid container spacing={3} alignItems="center">
-          <Grid item xs={12} sm={6}>
-            <img
-              src={testimonialImage}
-              alt="Testimonial"
-              style={{ width: '100%', height: 'auto', borderRadius: '8px' }} 
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Box p={3}>
-            <Typography
-                variant="subtitle1"
-                sx={{ color: '#708090', mb: 2 }}
-              >Macenas dignissim justo eget nulla rutrum molestie. Meacenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed liboritis seem dui, velrutrum risus tinccidunt ullamcorper. Proin eu enium metus.Vivamus sed libero ornare, tristique quam in, gravida enim. nullam ut molesstie arcu at hendrerit elit. Morbi laoreet elit at ligula moslestie, nec molestie mi balandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim spadien, vitae placcetrt ante feugiat eget.Quisque malesuada enim sapien,vitae placerat ante feugiat eget.Quisque vulputate odio neque, eget efficitur libero condimentum id. curabitur id nibh id sem dignissim finibus ac sit amet magna.
-            
-              </Typography>
-            
-            </Box>
-            </Grid>
-            
-            
-        </Grid>
-      </Box>
-      
-    </Container>
-  );
-};
+    <Box 
+            sx={{ 
+                flexGrow: 1, 
+                height: 'auto', // Set to auto for responsive height
+                marginTop: { xs: '20px', sm: '30px' },
+                padding: { xs: '0 16px', sm: '0 32px' },
+                fontFamily: 'Inter, sans-serif'
+                 // Add padding for mobile screens
+            }}
+        >
+            <Grid container spacing={2} columns={16} alignItems="center">
+                {/* Image Section */}
+                <Grid 
+                    item 
+                    xs={12} 
+                    sm={6} 
+                    sx={{
+                        display: 'flex',
+                        justifyContent: { xs: 'center', sm: 'flex-start' }, // Center image on mobile
+                        marginTop: { xs: '10px', sm: '0' }, // Adjust margin for mobile
+                    }}
+                >
+                    <img 
+                        src={testimonialImage}
+                        alt="" 
+                        style={{
+                            maxWidth: '100%', // Make the image responsive
+                            height: 'auto'
+                        }} />
+                </Grid>
 
-export default TestimonialsSection;
+                {/* Text Section */}
+                <Grid 
+                    item 
+                    xs={12} 
+                    sm={10} 
+                    sx={{
+                        marginTop: { xs: '20px', sm: '0' }, // Adjust margin for mobile
+                        paddingLeft: { sm: '150px' }, // Add padding on larger screens
+                    }}
+                >
+                    <Box>
+                        <div style={{
+                            textAlign: 'left', 
+                            fontSize: '1rem', // Adjust font size for responsiveness
+                            width: '100%', 
+                        }}>
+                            
+                            <p style={{ 
+                                color: 'gray', 
+                                textAlign: 'left', 
+                                fontSize: '1rem', // Adjust font size for responsiveness
+                                margin: '10px 0' 
+                            }}>
+                                Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie,
+                                massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis.
+                                In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus.
+                                In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
+                                commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis 
+                                libero. Donec consectetur faucibus ipsum id gravida.
+                            </p>
+                            <h1 style={{ margin: '10px 0' ,color:"#4CAF4F"}}>
+                                Tim Smith 
+                            </h1>
+                            < p style={{ margin: '10px 0',color:"gray" }}>
+                                British dragon Boat Racing Association
+                            </p>
+                            
+                        </div>
+                    </Box>
+                    <Box 
+                                display='flex' 
+                                sx={{ 
+                                    flexDirection: { xs: 'column', sm: 'row' }, // Stack items on mobile
+                                    alignItems: { xs: 'center', sm: 'flex-start' },
+                                    marginTop: '30px' 
+                                }}
+                            >
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1} sx={{alignContent:'center',marginTop:'30px',width:'100%' }}> 
+                <Box gridColumn="span 2">
+                    <img src={Sampleicon1 } alt=""/>
+                </Box>
+                <Box gridColumn="span 2">
+                    <img src={Sampleicon2 } alt=""/>
+                </Box>
+                <Box gridColumn="span 2">
+                    <img src={Sampleicon3} alt=""/>
+                </Box>
+                <Box gridColumn="span 2">
+                    <img src={Sampleicon4} alt=""/>
+                </Box>
+                <Box gridColumn="span 2">
+                    <img src={Sampleicon5} alt=""/>
+                </Box>
+                <Box gridColumn="span 2">
+                    <img src={Sampleicon6} alt=""/>
+                </Box>
+                
+            </Box>
+                                <Box 
+                                    sx={{ 
+                                        display: 'flex', 
+                                        alignItems: 'center', 
+                                        marginTop: '34px',
+                                        marginLeft: { sm: '2px' }
+                                    }}
+                                >
+                                    <Button sx={{ color: 'green', whiteSpace: 'nowrap', textTransform: 'none' }}>Meet All Customers</Button>
+                                    <East fontSize="large" sx={{ color: 'green', marginLeft: '5px' }} />
+                                </Box>
+                            </Box>
+                </Grid>
+            </Grid>
+        </Box>
+  )
+}
+
+export default TestimonalsSection2

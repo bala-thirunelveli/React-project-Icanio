@@ -59,30 +59,29 @@ const Header = () => {
       <CustomAppBar position="static">
         <Toolbar>
           <Grid container alignItems="center" justifyContent="space-between">
-            {/* Menu Icon for Mobile */}
+           
             <Grid item xs={2} sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-start' }}>
               <IconButton color="inherit" edge="start" onClick={handleDrawerToggle}>
                 <MenuIcon />
               </IconButton>
             </Grid>
 
-            {/* Logo for Mobile */}
+            
             <Grid item xs={8} sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}>
               <img src={logo} alt="Nexcent Logo" style={{ height: '30px' }} />
             </Grid>
 
-            {/* Login Button for Mobile */}
+            
             <Grid item xs={2} sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
               <CustomButton color="inherit">Login</CustomButton>
             </Grid>
 
-            {/* Logo for Large Screens */}
+      
             <Grid item xs={3} md={3} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-start',marginLeft:'50px' }}>
               <img src={logo} alt="Nexcent Logo" style={{ height: '30px' }} />
               </Grid>
         
-            {/* Menu Items for Large Screens */}
-            <Grid item xs={10} md={5} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+            <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
               <Grid container spacing={4}>
                 {['Home', 'Service', 'Feature', 'Product', 'Testimonial', 'FAQ'].map((text) => (
                   <Grid item key={text}>
@@ -94,8 +93,8 @@ const Header = () => {
               </Grid>
             </Grid>
 
-            {/* Auth Buttons for Large Screens */}
-            <Grid item xs={3} md={3} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', marginright:'50%' }}>
+            
+            <Grid item xs={3} md={2} sx={{ display: { xs: 'none', md: 'flex' },  }}>
               <CustomButton color="inherit">Login</CustomButton>
               <SignupButton variant="contained">Sign up</SignupButton>
             </Grid>
@@ -103,12 +102,12 @@ const Header = () => {
         </Toolbar>
       </CustomAppBar>
 
-      {/* Drawer for Mobile */}
+      
       <Drawer
         variant="temporary"
         open={mobileOpen}
         onClose={handleDrawerToggle}
-        ModalProps={{ keepMounted: true }} // Better open performance on mobile.
+        ModalProps={{ keepMounted: true }} 
         sx={{
           display: { xs: 'block', md: 'none' },
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
